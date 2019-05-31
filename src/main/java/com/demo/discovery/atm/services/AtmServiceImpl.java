@@ -179,8 +179,7 @@ public class AtmServiceImpl implements AtmService {
 
     private MultiValuedMap<Double, Double> computeNotesToDispense(double requiredAmount,Map dispensationMap){
         Collection<Double> availableNoteValues = dispensationMap.values();
-        MultiValuedMap<Double, Double> fundsFromNotesAvailable = fundsFromAvailableNoteValues(requiredAmount, availableNoteValues);
-        return fundsFromNotesAvailable;
+        return fundsFromAvailableNoteValues(requiredAmount, availableNoteValues);
     }
 
     private MultiValuedMap<Double, Double> fundsFromAvailableNoteValues(double requiredAmount,Collection<Double> availableNotes){
